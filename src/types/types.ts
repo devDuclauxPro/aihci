@@ -36,3 +36,10 @@ export type TBreakpoints = {
     spaceBetween: number;
   };
 };
+
+// Type utilisé pour le paramètre du composant internatInfoCard
+export type TInternatInfoCard = {
+  link: string;
+  buttonText: string;
+  description?: string;
+};

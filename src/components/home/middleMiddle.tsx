@@ -35,12 +35,7 @@ export const MiddleMiddle: FC = () => {
                   variant="contained"
                   color="success"
                   size="small"
-                  sx={{
-                    textTransform: "inherit",
-                    "&:hover": {
-                      animation: `${zoomInOutLeft} 1s infinite`,
-                    },
-                  }}
+                  sx={{ textTransform: "inherit", "&:hover": { animation: `${zoomInOutLeft} 1s infinite` } }}
                 >
                   Lire plus
                 </Button>
@@ -54,13 +49,7 @@ export const MiddleMiddle: FC = () => {
           variant="contained"
           color="warning"
           size="large"
-          sx={{
-            textTransform: "inherit",
-            fontWeight: 600,
-            "&:hover": {
-              animation: `${zoomInOutLeft} 1s infinite`,
-            },
-          }}
+          sx={{ textTransform: "inherit", fontWeight: 600, "&:hover": { animation: `${zoomInOutLeft} 1s infinite` } }}
         >
           Charger plus
         </Button>

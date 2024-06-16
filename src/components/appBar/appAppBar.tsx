@@ -5,11 +5,7 @@ import { Link } from "react-router-dom";
 import { menuList } from "./listTable";
 
 // Style du logo
-const logoStyle = {
-  width: "140px",
-  height: "auto",
-  cursor: "pointer",
-};
+const logoStyle = { width: "140px", height: "auto", cursor: "pointer" };
 
 export const AppAppBar: FC = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -25,12 +21,7 @@ export const AppAppBar: FC = () => {
         <Container maxWidth="xl">
           <Toolbar
             variant="regular"
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              flexShrink: 0,
-            }}
+            sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexShrink: 0 }}
           >
             <Box sx={{ flexGrow: 1 }}>
               <img
@@ -75,14 +66,7 @@ export const AppAppBar: FC = () => {
                 <MenuIcon />
               </Button>
               <Drawer anchor="right" open={open} onClose={toggleDrawer}>
-                <Box
-                  sx={{
-                    minWidth: "80vw",
-                    padding: 2,
-                    backgroundColor: "#262931",
-                    flexGrow: 1,
-                  }}
-                >
+                <Box sx={{ minWidth: "80vw", padding: 2, backgroundColor: "#262931", flexGrow: 1 }}>
                   {/* Liste des éléments du menu dans le Drawer */}
                   {menuList.map((list, id) => (
                     <MenuItem key={id}>

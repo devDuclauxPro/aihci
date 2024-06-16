@@ -24,14 +24,7 @@ export const HomeRight: FC = () => {
         <Typography variant="body1" textAlign="justify" fontWeight={300} fontSize={18} marginBottom={6}>
           Notre mission est de défendre les droits des internes de Côte d'Ivoire et d’assurer l’avenir de nos métiers.
         </Typography>
-        <Box
-          gap={2}
-          sx={{
-            display: "flex",
-            marginBottom: 3,
-            flexDirection: { xs: "column", sm: "row" },
-          }}
-        >
+        <Box gap={2} sx={{ display: "flex", marginBottom: 3, flexDirection: { xs: "column", sm: "row" } }}>
           <Button
             variant="contained"
             color="success"
@@ -53,9 +46,7 @@ export const HomeRight: FC = () => {
             sx={{
               textTransform: "inherit",
               fontWeight: 600,
-              "&:hover": {
-                animation: `${zoomInOutRight} 1s infinite`,
-              },
+              "&:hover": { animation: `${zoomInOutRight} 1s infinite` },
             }}
           >
             Comprendre l'internat

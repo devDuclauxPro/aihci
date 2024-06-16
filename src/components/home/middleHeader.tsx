@@ -20,10 +20,7 @@ export const MiddleHeader: FC = () => {
             color: list.name === "Tous" ? "white" : "#275427",
             textTransform: list.name === "Tous" ? "none" : "inherit",
             transition: "all .5s ease 0.1s",
-            "&:hover": {
-              bgcolor: "#4d8e4d",
-              color: "white",
-            },
+            "&:hover": { bgcolor: "#4d8e4d", color: "white" },
           }}
         >
           {list.name}

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
+import { AppAppBar } from "components/appBar/appAppBar";
 import { FC } from "react";
-import { AppAppBar } from "./appBar/appAppBar";
 
 // Composant Header qui inclut la barre d'application
 export const Header: FC = () => {

@@ -49,3 +49,36 @@ export const zoomInOutRight = keyframes`
     ${commonZoomInOutRight};
   }
 `;
+export const zoomInOutInternatConcours = keyframes`
+  0% {
+    ${commonTransform};
+  }
+  50% {
+    ${commonTransformHover};
+  }
+  100% {
+    ${commonTransform};
+  }
+`;
+export const zoomInOutInternatFormTheo = keyframes`
+  0% {
+    ${commonTransform};
+  }
+  50% {
+    ${commonTransformHover};
+  }
+  100% {
+    ${commonTransform};
+  }
+`;
+export const zoomInOutInternatRech = keyframes`
+ 0% {
+    ${commonTransform};
+  }
+  50% {
+    ${commonTransformHover};
+  }
+  100% {
+    ${commonTransform};
+  }
+`;
