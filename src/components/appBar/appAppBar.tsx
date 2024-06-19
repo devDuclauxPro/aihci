@@ -1,5 +1,6 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import { AppBar, Box, Button, Container, Drawer, MenuItem, Toolbar, Typography } from "@mui/material";
+import aihci from "images/aihci.png";
 import { FC, useState } from "react";
 import { Link } from "react-router-dom";
 import { menuList } from "./listTable";
@@ -24,11 +25,7 @@ export const AppAppBar: FC = () => {
             sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexShrink: 0 }}
           >
             <Box sx={{ flexGrow: 1 }}>
-              <img
-                src="https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg"
-                style={logoStyle}
-                alt="logo du site"
-              />
+              <img src={aihci} style={logoStyle} alt="logo du l'aihci" color="#fff" />
             </Box>
 
             {/* Menu principal (visible sur les écrans moyens et plus grands) */}

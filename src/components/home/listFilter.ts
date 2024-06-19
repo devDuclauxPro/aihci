@@ -24,7 +24,7 @@ export const listFilter: TListItem[] = [
 export const listCards: TCard[] = [
   {
     date: "14/06/2024",
-    title: "Titre 1",
+    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, blanditiis sint totam minus expedita",
     content:
       "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
   },
@@ -97,4 +97,3 @@ export const listBreackPoint: TBreakpoints = {
     spaceBetween: 10,
   },
 };
-

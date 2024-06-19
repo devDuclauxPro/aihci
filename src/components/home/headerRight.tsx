@@ -1,5 +1,6 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { zoomInOutLeft, zoomInOutRight } from "animations/animation";
+import { ButtonGeneric } from "components/generic/buttonGeneric";
 import { FC } from "react";
 
 // Composant HomeRight qui affiche le contenu principal à droite sur la page d'accueil
@@ -25,32 +26,19 @@ export const HomeRight: FC = () => {
           Notre mission est de défendre les droits des internes de Côte d'Ivoire et d’assurer l’avenir de nos métiers.
         </Typography>
         <Box gap={2} sx={{ display: "flex", marginBottom: 3, flexDirection: { xs: "column", sm: "row" } }}>
-          <Button
-            variant="contained"
-            color="success"
+          <ButtonGeneric
+            buttonText="En savoir plus"
+            link="/qui-sommes-nous"
+            zooInOutCard={zoomInOutLeft}
             size="large"
-            sx={{
-              textTransform: "inherit",
-              fontWeight: 600,
-              "&:hover": {
-                animation: `${zoomInOutLeft} 1s infinite`,
-              },
-            }}
-          >
-            En savoir plus
-          </Button>
-          <Button
+          />
+          <ButtonGeneric
+            buttonText="Comprendre l'internat"
+            link="/linternat"
+            zooInOutCard={zoomInOutRight}
             variant="outlined"
-            color="success"
             size="large"
-            sx={{
-              textTransform: "inherit",
-              fontWeight: 600,
-              "&:hover": { animation: `${zoomInOutRight} 1s infinite` },
-            }}
-          >
-            Comprendre l'internat
-          </Button>
+          />
         </Box>
       </Box>
     </Box>

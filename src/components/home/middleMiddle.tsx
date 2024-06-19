@@ -1,5 +1,16 @@
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Grid,
+  Typography,
+} from "@mui/material";
 import { zoomInOutLeft } from "animations/animation";
+import { ButtonGeneric } from "components/generic/buttonGeneric";
 import { FC } from "react";
 import { listCards } from "./listFilter";
 
@@ -11,35 +22,30 @@ export const MiddleMiddle: FC = () => {
         {listCards.map((list, id) => (
           <Grid key={id} item xs={12} sm={6} lg={4}>
             <Card elevation={5} sx={{ padding: 1 }}>
-              <CardMedia
-                component="img"
-                height={150}
-                width={100}
-                sx={{ objectFit: "initial" }}
-                image="https://fnsipbm.fr/wp-content/uploads/2023/06/CDP-768x514.png"
-                title="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="subtitle2" component="div" color="#e5691b">
-                  {list.date}
-                </Typography>
-                <Typography gutterBottom variant="subtitle2" component="div" color="#275427">
-                  {list.title}
-                </Typography>
-                <Typography variant="subtitle1" color="text.secondary" fontSize={13}>
-                  {list.content}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button
-                  variant="contained"
-                  color="success"
-                  size="small"
-                  sx={{ textTransform: "inherit", "&:hover": { animation: `${zoomInOutLeft} 1s infinite` } }}
-                >
-                  Lire plus
-                </Button>
-              </CardActions>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height={150}
+                  width={100}
+                  sx={{ objectFit: "initial" }}
+                  image="https://fnsipbm.fr/wp-content/uploads/2023/06/CDP-768x514.png"
+                  title="green iguana"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="subtitle2" component="div" color="#e5691b">
+                    {list.date}
+                  </Typography>
+                  <Typography gutterBottom variant="subtitle2" component="div" color="#275427">
+                    {list.title}
+                  </Typography>
+                  <Typography variant="subtitle1" color="text.secondary" fontSize={13}>
+                    {list.content}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <ButtonGeneric buttonText="Lire plus" link="/article-1" zooInOutCard={zoomInOutLeft} size="small" />
+                </CardActions>
+              </CardActionArea>
             </Card>
           </Grid>
         ))}

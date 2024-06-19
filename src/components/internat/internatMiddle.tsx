@@ -1,12 +1,12 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { FC } from "react";
+import { SectionBoxPratique } from "../generic/sectionBoxPratique";
 import { InternatCardConcours } from "./internatCardConcours";
 import { InternatCardFiliere } from "./internatCardFiliere";
 import { InternatCardFormPratique } from "./internatCardFormPratique";
 import { InternatCardFormTheo } from "./internatCardFormTheo";
 import { InternatCardGuide } from "./internatCardGuide";
 import { InternatCardRecherche } from "./internatCardRecherche";
-import { SectionBoxPratique } from "./sectionBoxPratique";
 
 export const InternatMiddle: FC = () => {
   return (
