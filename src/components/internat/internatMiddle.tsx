@@ -1,12 +1,12 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { FC } from "react";
 import { SectionBoxPratique } from "../generic/sectionBoxPratique";
+import { InternatCardChoix } from "./internatCardChoix";
 import { InternatCardConcours } from "./internatCardConcours";
-import { InternatCardFiliere } from "./internatCardFiliere";
 import { InternatCardFormPratique } from "./internatCardFormPratique";
 import { InternatCardFormTheo } from "./internatCardFormTheo";
 import { InternatCardGuide } from "./internatCardGuide";
-import { InternatCardRecherche } from "./internatCardRecherche";
+import { InternatCardProfil } from "./internatCardProfil";
 
 export const InternatMiddle: FC = () => {
   return (
@@ -27,10 +27,7 @@ export const InternatMiddle: FC = () => {
                 <InternatCardFormTheo link="/la-formation-theorique" buttonText="La formation théorique" />
               </Grid>
               <Grid item>
-                <InternatCardRecherche
-                  link="/la-recherche-durant-linternat"
-                  buttonText="La recherche durant l'internat"
-                />
+                <InternatCardProfil link="/la-profil-de-carriere" buttonText="Le profil de carrière de l'interne" />
               </Grid>
             </Grid>
           </Grid>
@@ -48,22 +45,16 @@ export const InternatMiddle: FC = () => {
               <Grid item xs={12} lg={6}>
                 <Box bgcolor="#9db69d" padding={1} borderRadius={1}>
                   <Typography variant="h6" component="div" color="white" paddingX={1} paddingY={0.8} textAlign="center">
-                    Les 3 filières de l’internat
+                    Les choix à l’internat
                   </Typography>
                   <Grid item marginBottom={1}>
-                    <InternatCardFiliere link="/des-biologie-medicale" buttonText="DES de Biologie Médicale" />
+                    <InternatCardChoix link="/choix-des-chambres" buttonText="Choix des chambres" />
                   </Grid>
                   <Grid item marginBottom={1}>
-                    <InternatCardFiliere
-                      link="/des-pharmacie-hospitaliere"
-                      buttonText="DES de Pharmacie Hospitalière"
-                    />
+                    <InternatCardChoix link="/choix-des-postes" buttonText="Choix des postes" />
                   </Grid>
                   <Grid item marginBottom={1}>
-                    <InternatCardFiliere
-                      link="/des-inovation-pharmaceutique-recherche"
-                      buttonText="DES Innovation Pharmaceutique et Recherche"
-                    />
+                    <InternatCardChoix link="/les-specialites" buttonText="Spécialités pendant le choix des postes" />
                   </Grid>
                 </Box>
               </Grid>
@@ -71,18 +62,15 @@ export const InternatMiddle: FC = () => {
               <Grid item xs={12} sx={{ display: { xs: "none", lg: "block" } }}>
                 <SectionBoxPratique title="La formation pratique durant l’internat">
                   <Grid item marginBottom={1}>
-                    <InternatCardFormPratique link="/choisir-son-stage" buttonText="Choisir son stage" />
+                    <InternatCardFormPratique link="/le-samedi-de-linterne" buttonText="Samedi de l'interne" />
+                  </Grid>
+                  <Grid item marginBottom={1}>
+                    <InternatCardFormPratique link="/la-formation-continue" buttonText="Formation continue" />
                   </Grid>
                   <Grid item marginBottom={1}>
                     <InternatCardFormPratique
-                      link="/stages-extra-hospitaliers"
-                      buttonText="Stages extra-hospitaliers"
-                    />
-                  </Grid>
-                  <Grid item marginBottom={1}>
-                    <InternatCardFormPratique
-                      link="/la-mobilite-durant-linternat"
-                      buttonText="La mobilité durant l'internat"
+                      link="/les-journees-scientifiques"
+                      buttonText="Les journées scientifiques"
                     />
                   </Grid>
                 </SectionBoxPratique>
@@ -92,16 +80,13 @@ export const InternatMiddle: FC = () => {
           <Grid item xs={12} sx={{ display: { lg: "none" } }}>
             <SectionBoxPratique title="La formation pratique durant l’internat">
               <Grid item marginBottom={1}>
-                <InternatCardFormPratique link="/choisir-son-stage" buttonText="Choisir son stage" />
+                <InternatCardFormPratique link="/le-samedi-de-linterne" buttonText="Samedi de l'interne" />
               </Grid>
               <Grid item marginBottom={1}>
-                <InternatCardFormPratique link="/stages-extra-hospitaliers" buttonText="Stages extra-hospitaliers" />
+                <InternatCardFormPratique link="/la-formation-continue" buttonText="Formation continue" />
               </Grid>
               <Grid item marginBottom={1}>
-                <InternatCardFormPratique
-                  link="/la-mobilite-durant-linternat"
-                  buttonText="La mobilité durant l'internat"
-                />
+                <InternatCardFormPratique link="/les-journees-scientifiques" buttonText="Les journées scientifiques" />
               </Grid>
             </SectionBoxPratique>
           </Grid>

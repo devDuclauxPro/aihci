@@ -3,7 +3,9 @@ import { Actualite } from "pages/actualite";
 import { Association } from "pages/association";
 import { Connexion } from "pages/connexion";
 import { Home } from "pages/home";
+import { Inscription } from "pages/inscription";
 import { Internat } from "pages/internat";
+import { Membre } from "pages/membre";
 import { Partenaire } from "pages/partenaire";
 import { QuiSommesNous } from "pages/quiSommesNous";
 import { Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
@@ -19,6 +21,8 @@ const routes = createRoutesFromElements(
     <Route path="actualites" element={<Actualite />} />
     <Route path="qui-sommes-nous" element={<QuiSommesNous />} />
     <Route path="se-connecter" element={<Connexion />} />
+    <Route path="inscription" element={<Inscription />} />
+    <Route path="membre" element={<Membre />} />
   </Route>
 );
 

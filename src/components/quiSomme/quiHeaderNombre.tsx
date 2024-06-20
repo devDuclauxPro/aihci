@@ -3,8 +3,8 @@ import { FC } from "react";
 
 const stats = [
   { number: 40, description: "Ans d'existence" },
-  { number: 40, description: "Internes en pharmacies" },
-  { number: 40, description: "Internes en médecine" },
+  { number: 40, description: "Internes en pharmacie inscrits" },
+  { number: 40, description: "Internes en médecine inscrits" },
 ];
 
 /**
@@ -20,9 +20,7 @@ export const QuiHeaderNombre: FC = () => {
       sx={{
         justifyContent: { xs: "center", md: "space-between" },
         color: "#ff6900",
-        "& > div": {
-          textAlign: "center",
-        },
+        "& > div": { textAlign: "center" },
       }}
     >
       {stats.map((stat, index) => (

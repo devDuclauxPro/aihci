@@ -8,7 +8,6 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { FC } from "react";
 
-
 export const RightConnexion: FC = () => {
   return (
     <Grid item xs={12} md={6}>

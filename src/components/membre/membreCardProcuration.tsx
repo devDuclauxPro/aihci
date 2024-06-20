@@ -4,17 +4,17 @@ import { ButtonGeneric } from "components/generic/buttonGeneric";
 import { FC } from "react";
 import { TInternatInfoCard } from "types/types";
 
-// Composant pour afficher une carte filière pour l'internat
-export const InternatCardFiliere: FC<TInternatInfoCard> = ({ link, buttonText, description }) => {
+// Composant pour afficher une carte concours pour l'internat
+export const MembreCardProcuration: FC<TInternatInfoCard> = ({ link, buttonText, description }) => {
   return (
     <Card elevation={3} sx={{ bgcolor: "#fcb900" }}>
-      <CardActionArea>
+      <CardActionArea disableRipple>
         <CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
           <ButtonGeneric
             buttonText={buttonText}
             link={link}
             zooInOutCard={zoomInOutInternatConcours}
-            couleur="primary"
+            couleur="success"
           />
           {description && (
             <Typography
@@ -25,8 +25,7 @@ export const InternatCardFiliere: FC<TInternatInfoCard> = ({ link, buttonText, d
               marginTop={2}
               padding={1}
               borderRadius={1.7}
-              bgcolor="#ffffff"
-              color="black"
+              bgcolor="white"
             >
               {description}
             </Typography>

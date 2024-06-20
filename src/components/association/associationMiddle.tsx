@@ -64,7 +64,7 @@ export const AssociationMiddle = () => {
         <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: 3 }}>
           <ButtonGeneric
             buttonText="Adhérer à l'AIHCI"
-            link="/qui-sommes-nous"
+            link="/inscription"
             zooInOutCard={zoomInOutLeft}
             size="small"
           />

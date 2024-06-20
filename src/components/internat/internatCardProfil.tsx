@@ -1,16 +1,24 @@
-import { Box, Card, CardActionArea, CardContent, Typography } from "@mui/material";
+import { Card, CardActionArea, CardContent, Typography } from "@mui/material";
 import { zoomInOutInternatRech } from "animations/animation";
 import { ButtonGeneric } from "components/generic/buttonGeneric";
 import { FC } from "react";
 import { TInternatInfoCard } from "types/types";
 
-// Composant pour afficher une carte guide pour l'internat
-export const InternatCardGuide: FC<TInternatInfoCard> = ({ link, buttonText, description }) => {
+// Composant pour afficher une carte d'information sur la recherche durant l'internat
+export const InternatCardProfil: FC<TInternatInfoCard> = ({ link, buttonText, description }) => {
   return (
     <Card elevation={3} sx={{ bgcolor: "#fcb900" }}>
       <CardActionArea>
-        <CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-          <ButtonGeneric buttonText={buttonText} link={link} zooInOutCard={zoomInOutInternatRech} couleur="secondary" />
+        <CardContent
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            height: { sx: 0, md: 150, lg: 150 },
+          }}
+        >
+          <ButtonGeneric buttonText={buttonText} link={link} zooInOutCard={zoomInOutInternatRech} couleur="error" />
           {description && (
             <Typography
               variant="subtitle1"
@@ -27,7 +35,6 @@ export const InternatCardGuide: FC<TInternatInfoCard> = ({ link, buttonText, des
             </Typography>
           )}
         </CardContent>
-        <Box sx={{ height: { sx: 0, lg: 100 } }}></Box>
       </CardActionArea>
     </Card>
   );
