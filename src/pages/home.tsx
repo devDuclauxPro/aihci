@@ -1,6 +1,6 @@
-import { HomeFooter } from "components/home/homeFooter";
-import { HomeHeader } from "components/home/homeHeader";
-import { HomeMiddle } from "components/home/homeMiddle";
+import { HomeFooter } from "components/freedComponent/home/homeFooter";
+import { HomeHeader } from "components/freedComponent/home/homeHeader";
+import { HomeMiddle } from "components/freedComponent/home/homeMiddle";
 import { Layout } from "layout/layout";
 import { FC } from "react";
 

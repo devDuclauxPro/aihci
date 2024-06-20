@@ -1,4 +1,4 @@
-import { AssociationMiddle } from "components/association/associationMiddle";
+import { AssociationMiddle } from "components/freedComponent/association/associationMiddle";
 import { GenericHeader } from "components/generic/genericHeader";
 import notrereseau from "images/notre-reseau-associatif.png";
 import { Layout } from "layout/layout";

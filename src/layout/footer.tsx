@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import { FooterListMenu } from "components/home/footerListMenu";
-import { SmalRigthFollowing } from "components/home/smalRigthFollowing";
+import { FooterListMenu } from "components/freedComponent/home/footerListMenu";
+import { SmalRigthFollowing } from "components/freedComponent/home/smalRigthFollowing";
 import { FC } from "react";
 
 // Composant Footer qui inclut le menu de la liste de pied de page et le suivi à droite

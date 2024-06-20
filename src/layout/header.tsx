@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { AppAppBar } from "components/appBar/appAppBar";
+import { AppAppBar } from "components/freedComponent/appBar/appAppBar";
 import { FC } from "react";
 
 // Composant Header qui inclut la barre d'application

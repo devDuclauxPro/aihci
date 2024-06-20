@@ -1,5 +1,5 @@
+import { InternatMiddle } from "components/freedComponent/internat/internatMiddle";
 import { GenericHeader } from "components/generic/genericHeader";
-import { InternatMiddle } from "components/internat/internatMiddle";
 import linternat from "images/linternat.png";
 import { Layout } from "layout/layout";
 import { FC } from "react";

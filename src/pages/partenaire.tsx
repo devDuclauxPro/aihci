@@ -1,5 +1,5 @@
 import { GenericHeader } from "components/generic/genericHeader";
-import { PartenaireMiddle } from "components/partenaire/partenaireMiddle";
+import { PartenaireMiddle } from "components/freedComponent/partenaire/partenaireMiddle";
 import nospartenaires from "images/nos-partenaires.png";
 import { Layout } from "layout/layout";
 import { FC } from "react";

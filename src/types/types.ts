@@ -19,6 +19,7 @@ export type TListItem = {
 
 // Type utilisé dans les cartes de l'application
 export type TCard = {
+  id: number;
   date: string;
   title: string;
   content: string;

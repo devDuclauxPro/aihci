@@ -1,4 +1,4 @@
-import { ActusMiddle } from "components/actus/actusMiddle";
+import { ActusMiddle } from "components/freedComponent/actus/actusMiddle";
 import { GenericHeader } from "components/generic/genericHeader";
 import actualites from "images/actualites.png";
 import { Layout } from "layout/layout";

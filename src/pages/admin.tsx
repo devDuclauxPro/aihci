@@ -1,17 +1,16 @@
 import { Typography } from "@mui/material";
-import { MembreMiddle } from "components/authComponent/membre/membreMiddle";
+import { AdminMiddle } from "components/admin/adminMiddle";
 import { GenericHeaderAihci } from "components/generic/genericHeaderAihci";
 import { Layout } from "layout/layout";
-import { FC } from "react";
 
-export const Membre: FC = () => {
+export const Admin = () => {
   return (
     <Layout>
       <GenericHeaderAihci />
       <Typography variant="h4" component="div" textAlign="center" fontWeight={300} paddingY={2}>
-        Espace membre
+        Espace admin
       </Typography>
-      <MembreMiddle />
+      <AdminMiddle />
     </Layout>
   );
 };
