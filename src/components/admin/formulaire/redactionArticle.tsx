@@ -13,7 +13,7 @@ const typeArticle = [{ label: "Communiqué de presse" }, { label: "Evènement" }
 export const RedactionArticle: FC = () => {
   return (
     <Layout>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ minHeight: "80vh" }}>
         <Typography marginTop={10} variant="h4" component="div" textAlign="center" fontWeight={300} paddingY={2}>
           Rediger votre article
         </Typography>
@@ -30,7 +30,7 @@ export const RedactionArticle: FC = () => {
               autoFocus
             />
           </Grid>
-          <Grid item>
+          <Grid item marginBottom={1}>
             <Autocomplete
               disablePortal
               id="typeArticle"

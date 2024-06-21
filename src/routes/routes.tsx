@@ -1,6 +1,8 @@
 import { App } from "App";
 import { AuthAdmin } from "components/admin/affichage/authAdmin";
 import { RedactionArticle } from "components/admin/formulaire/redactionArticle";
+import { ArticleScientifique } from "components/admin/visuel/articleScientifique";
+import { Preocupation } from "components/admin/visuel/preocupation";
 import { Actualite } from "pages/actualite";
 import { Admin } from "pages/admin";
 import { Article } from "pages/article";
@@ -36,6 +38,8 @@ const routes = createRoutesFromElements(
       <Route path="admin" element={<AuthAdmin />}>
         <Route index element={<Admin />} />
         <Route path="rediger-article" element={<RedactionArticle />} />
+        <Route path="voir-les-articles-soumis" element={<ArticleScientifique />} />
+        <Route path="voir-les-preocupations" element={<Preocupation />} />
       </Route>
       <Route path="telecharher-les-procurations" element={<Procuration />} />
     </Route>

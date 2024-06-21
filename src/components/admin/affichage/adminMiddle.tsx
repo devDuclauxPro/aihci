@@ -51,10 +51,7 @@ export const AdminMiddle: FC = () => {
                 />
               </Grid>
               <Grid item xs={12}>
-                <AdminCardSoumission
-                  link="/espace-membre/admin/rediger-article"
-                  buttonText="Je redige les informations"
-                />
+                <AdminCardSoumission link="/espace-membre/admin/rediger-article" buttonText="Je redige les articles" />
               </Grid>
             </Grid>
           </Grid>
