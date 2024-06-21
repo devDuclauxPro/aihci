@@ -41,13 +41,19 @@ export const AdminMiddle: FC = () => {
               <Grid item xs={12}>
                 <AdminCardProbleme
                   link="/espace-membre/admin/voir-les-preocupations"
-                  buttonText="Je les preocupation des internes"
+                  buttonText="Je regarde les preocupations des internes"
                 />
               </Grid>
               <Grid item xs={12}>
                 <AdminCardSoumission
                   link="/espace-membre/admin/voir-les-articles-soumis"
                   buttonText="Je regarde les articles soumis pour les Journées scientifiques"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <AdminCardSoumission
+                  link="/espace-membre/admin/rediger-article"
+                  buttonText="Je redige les informations"
                 />
               </Grid>
             </Grid>

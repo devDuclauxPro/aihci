@@ -12,13 +12,7 @@ import spb from "images/spb.jpg";
 import { TBreakpoints, TCard, TListItem } from "types/types";
 
 // Tableau des listes de filtrage de la page d'accueil de l'application
-export const listFilter: TListItem[] = [
-  { name: "Tous" },
-  { name: "Presse" },
-  { name: "Evénement" },
-  { name: "Débouchés professionnels" },
-  { name: "Communiqué de presse" }, // Correction de l'espace en trop
-];
+export const listFilter: TListItem[] = [{ name: "Tous" }, { name: "Communiqué de presse" }, { name: "Evénement" }];
 
 // Tableau des cartes de la page d'accueil de l'application
 export const listCards: TCard[] = [
