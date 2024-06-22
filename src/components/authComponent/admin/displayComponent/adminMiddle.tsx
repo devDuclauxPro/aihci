@@ -1,9 +1,6 @@
 import { Box, Container, Grid } from "@mui/material";
+import { CardGenericComponent } from "components/generic/cardGenericComponent";
 import { FC } from "react";
-import { AdminCardDocument } from "../cardComponent/adminCardDocument";
-import { AdminCardFormTheo } from "../cardComponent/adminCardFormTheo";
-import { AdminCardProbleme } from "../cardComponent/adminCardProbleme";
-import { AdminCardSoumission } from "../cardComponent/adminCardSoumission";
 
 export const AdminMiddle: FC = () => {
   return (
@@ -14,39 +11,46 @@ export const AdminMiddle: FC = () => {
           <Grid item xs={12} md={6}>
             <Grid container direction="column" spacing={2}>
               <Grid item>
-                <AdminCardDocument link="/espace-membre/admin/ajouter-un-document" buttonText="J'ajoute un document" />
-              </Grid>
-              <Grid item>
-                <AdminCardDocument link="/espace-membre/admin/rediger-article" buttonText="Je redige les articles" />
-              </Grid>
-              <Grid item>
-                <AdminCardDocument
-                  link="/espace-membre/admin/ajoute-le-titre-de-la-formation"
-                  buttonText="J'ajoutes le titre de la formation"
+                <CardGenericComponent
+                  btnLink="/espace-membre/admin/ajouter-un-document"
+                  btnText="J'ajoute un document"
                 />
+              </Grid>
+              <Grid item>
+                <CardGenericComponent btnLink="/espace-membre/admin/rediger-article" btnText="Je redige les articles" />
+              </Grid>
+              <Grid item>
+                <Grid item>
+                  <CardGenericComponent
+                    btnLink="/espace-membre/admin/ajoute-le-titre-de-la-formation"
+                    btnText="J'ajoutes le titre de la formation"
+                  />
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
           {/* Colonne de droite */}
           <Grid item xs={12} md={6}>
             <Grid container spacing={2}>
-              {/* Section Filières de l'internat */}
               <Grid item xs={12}>
-                <AdminCardProbleme
-                  link="/espace-membre/admin/voir-les-preocupations"
-                  buttonText="Je regarde les preocupations des internes"
+                <CardGenericComponent
+                  btnLink="/espace-membre/admin/voir-les-preocupations"
+                  btnText="Je regarde les preocupations des internes"
+                  btnColor="primary"
                 />
               </Grid>
               <Grid item xs={12}>
-                <AdminCardSoumission
-                  link="/espace-membre/admin/voir-les-articles-soumis"
-                  buttonText="Je regarde les articles soumis pour les Journées scientifiques"
+                <CardGenericComponent
+                  btnLink="/espace-membre/admin/voir-les-articles-soumis"
+                  btnText="Je regarde les articles soumis pour les Journées scientifiques"
+                  btnColor="primary"
                 />
               </Grid>
               <Grid item xs={12}>
-                <AdminCardFormTheo
-                  link="/espace-membre/admin/voir-les-inscrits-de-la-formation"
-                  buttonText="Je regarde les inscrits de la formation"
+                <CardGenericComponent
+                  btnLink="/espace-membre/admin/voir-les-inscrits-de-la-formation"
+                  btnText="Je regarde les inscrits de la formation"
+                  btnColor="primary"
                 />
               </Grid>
             </Grid>

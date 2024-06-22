@@ -63,3 +63,15 @@ export type TMessage = {
     selectedRow: { fullName: string; email: string; contact: string; interne: string; message: string } | null;
   };
 };
+
+// Type utilisé pour le paramètre du composant GenericCardComponent
+export type TGenericCardComponent = {
+  btnText: string;
+  cardDescription?: string;
+  btnLink?: string;
+  btnColor?: "error" | "secondary" | "inherit" | "primary" | "success" | "info" | "warning";
+  btnSize?: "small" | "medium" | "large";
+  btnVariant?: "text" | "contained" | "outlined";
+  cardDescriptionColor?: string;
+  btnZooInOutCard?: string;
+};

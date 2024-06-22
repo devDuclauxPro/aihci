@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import { MembreMiddle } from "components/authComponent/membre/membreMiddle";
+import { MembreMiddle } from "components/authComponent/membre/memberMiddle";
 import { GenericHeaderAihci } from "components/generic/genericHeaderAihci";
 import { Layout } from "layout/layout";
 import { FC } from "react";

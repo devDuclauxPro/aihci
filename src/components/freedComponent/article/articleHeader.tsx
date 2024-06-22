@@ -20,7 +20,7 @@ export const ArticleHeader: FC = () => {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ marginY: 3, minHeight:"100vh" }}>
+    <Container maxWidth="lg" sx={{ marginY: 3, minHeight: "100vh" }}>
       <Paper elevation={5} sx={{ borderRadius: 3, padding: 1 }}>
         <Box>
           <Typography variant="h5" component="h1">

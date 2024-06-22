@@ -3,17 +3,17 @@ import { FC } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { TImageSwiperProps } from "types/types";
-import { listBreackPoint } from "./listFilter";
+import { listBreackPoint } from "../../../utils/listFilter";
 
 // Composant ImageSwiper qui affiche un carrousel d'images avec Swiper
 export const ImageSwiper: FC<TImageSwiperProps> = ({ listImage }) => {
   return (
     <Swiper
       modules={[Autoplay, Navigation, Pagination]} // Modules Swiper utilisés
-      spaceBetween={2} // Espacement entre les slides
-      loop={true} // Boucle infinie
+      spaceBetween={2}
+      loop={true}
       autoplay={{ delay: 2500 }} // Défilement automatique avec délai de 2500ms
-      navigation={true} // Boutons de navigation activés
+      navigation={true}
       breakpoints={listBreackPoint} // Points de rupture pour la réactivité
     >
       {listImage.map((list, id) => (

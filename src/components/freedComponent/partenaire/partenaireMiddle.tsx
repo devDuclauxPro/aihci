@@ -1,20 +1,20 @@
 import {
-    Box,
-    Card,
-    CardActionArea,
-    CardActions,
-    CardContent,
-    CardMedia,
-    Container,
-    Grid,
-    Typography,
+  Box,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Container,
+  Grid,
+  Typography,
 } from "@mui/material";
-import { zoomInOutLeft } from "animations/animation";
-import { listCards } from "components/freedComponent/home/listFilter";
-import { ButtonGeneric } from "components/generic/buttonGeneric";
+import { zoomInOutGenericOne } from "animations/animation";
+import { BtnGeneric } from "components/generic/btnGeneric";
 import aihciLogo from "images/aihci.png";
 import offresPartenaires from "images/offres-partenaires.png";
 import { FC } from "react";
+import { listCards } from "utils/listFilter";
 
 // Composant PartenaireMiddle affiche une liste de cartes représentant les partenaires ou les offres.
 export const PartenaireMiddle: FC = () => {
@@ -53,11 +53,11 @@ export const PartenaireMiddle: FC = () => {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <ButtonGeneric
-                      buttonText="En savoir plus"
-                      link="/qui-sommes-nous"
-                      zooInOutCard={zoomInOutLeft}
-                      size="small"
+                    <BtnGeneric
+                      btnText="En savoir plus"
+                      btnLink="/qui-sommes-nous"
+                      btnZooInOutCard={zoomInOutGenericOne}
+                      btnSize="small"
                     />
                   </CardActions>
                 </CardActionArea>

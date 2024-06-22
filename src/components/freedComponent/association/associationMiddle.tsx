@@ -1,7 +1,7 @@
 import { Box, Container, List, ListItem, Typography } from "@mui/material";
-import { zoomInOutLeft } from "animations/animation";
-import { textAdhesion } from "components/freedComponent/association/textAdhesion";
-import { ButtonGeneric } from "components/generic/buttonGeneric";
+import { zoomInOutGenericOne } from "animations/animation";
+import { BtnGeneric } from "components/generic/btnGeneric";
+import { textAdhesion } from "utils/textAdhesion";
 
 export const AssociationMiddle = () => {
   return (
@@ -62,11 +62,11 @@ export const AssociationMiddle = () => {
 
         {/* Bouton d'adhésion */}
         <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: 3 }}>
-          <ButtonGeneric
-            buttonText="Adhérer à l'AIHCI"
-            link="/inscription"
-            zooInOutCard={zoomInOutLeft}
-            size="small"
+          <BtnGeneric
+            btnText="Adhérer à l'AIHCI"
+            btnLink="/inscription"
+            btnZooInOutCard={zoomInOutGenericOne}
+            btnSize="small"
           />
         </Box>
       </Container>

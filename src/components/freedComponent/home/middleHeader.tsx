@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { FC } from "react";
-import { listFilter } from "./listFilter";
+import { listFilter } from "../../../utils/listFilter";
 
 // Composant MiddleHeader qui affiche une liste filtrée avec des styles spécifiques pour chaque élément
 export const MiddleHeader: FC = () => {
