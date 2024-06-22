@@ -1,19 +1,11 @@
-import { Button, Container, Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { Layout } from "layout/layout";
-import { useState } from "react";
+import { FC, useState } from "react";
+import { TRowData } from "types/types";
 import { Message } from "./message";
 
-interface RowData {
-  id: number;
-  fullName: string;
-  email: string;
-  contact: string;
-  interne: string;
-  message: string;
-}
-
-const rows: RowData[] = [
+const rows: TRowData[] = [
   {
     id: 1,
     fullName: "Snow",
@@ -27,8 +19,9 @@ const rows: RowData[] = [
     fullName: "Lannister",
     email: "cersei@gmail.com",
     contact: "0707965744",
-    interne: "Interne en pharmacie",
-    message: "mon message",
+    interne: "Interne en médecine",
+    message:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur ea expedita, non, dolores enim odit similique autem dignissimos quaerat odio eum iure sit quas eligendi amet ratione ullam mollitia omnis cupiditate esse ipsa! Blanditiis rerum dolor modi tempora. Maiores, reprehenderit? Et quidem adipisci magnam dignissimos nobis minus fugiat hic libero consequuntur impedit quae dolorem omnis facere nihil expedita, dolor labore quod atque molestias ad culpa! Nesciunt amet suscipit modi dignissimos magnam sit alias repudiandae eum nostrum voluptas ipsa consectetur molestias repellat ab harum officia officiis quidem numquam adipisci aut illum pariatur dolores, similique est! Porro natus distinctio quos corrupti, fugiat omnis illo assumenda dignissimos. Nemo voluptate debitis, nulla cum ea corrupti earum quibusdam autem officia dignissimos. Nulla, maxime praesentium.",
   },
   {
     id: 3,
@@ -88,11 +81,11 @@ const rows: RowData[] = [
   },
 ];
 
-export const Preocupation = () => {
+export const Preocupation: FC = () => {
   const [open, setOpen] = useState(false);
-  const [selectedRow, setSelectedRow] = useState<RowData | null>(null); // Utilisation de null comme valeur initiale
+  const [selectedRow, setSelectedRow] = useState<TRowData | null>(null);
 
-  const handleOpen = (row: RowData) => {
+  const handleOpen = (row: TRowData) => {
     setSelectedRow(row);
     setOpen(true);
   };
@@ -103,26 +96,16 @@ export const Preocupation = () => {
 
   const columns: GridColDef[] = [
     { field: "id", headerName: "Id", width: 70 },
-    { field: "fullName", headerName: "Nom & prénoms", width: 150 },
+    { field: "fullName", headerName: "Nom & prénoms", width: 180 },
     { field: "email", headerName: "Email", type: "string", width: 180 },
-    { field: "contact", headerName: "Contact", type: "string", width: 150 },
+    { field: "contact", headerName: "Contact", type: "string", width: 180 },
     { field: "interne", headerName: "Interne en", type: "string", width: 180 },
-    {
-      field: "supprimer",
-      type: "actions",
-      width: 120,
-      renderCell: (params) => (
-        <Button variant="contained" color="error" size="small">
-          Supprimer
-        </Button>
-      ),
-    },
     {
       field: "togglePopper",
       type: "actions",
-      width: 130,
+      width: 180,
       renderCell: (params) => (
-        <Button variant="contained" color="primary" size="small" onClick={() => handleOpen(params.row)}>
+        <Button disableRipple variant="contained" color="primary" size="small" onClick={() => handleOpen(params.row)}>
           Voir message
         </Button>
       ),
@@ -135,7 +118,7 @@ export const Preocupation = () => {
         <Typography marginTop={12} variant="h4" component="div" textAlign="center" fontWeight={300} paddingY={2}>
           Voir les préoccupations des internes
         </Typography>
-        <div style={{ height: 400, width: "100%" }}>
+        <Box style={{ height: 400, width: "100%" }}>
           <DataGrid
             rows={rows}
             columns={columns}
@@ -143,7 +126,7 @@ export const Preocupation = () => {
             pageSizeOptions={[5, 10]}
             checkboxSelection
           />
-        </div>
+        </Box>
         <Message messageProps={{ open, handleClose, selectedRow }} />
       </Container>
     </Layout>

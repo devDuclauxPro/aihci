@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { FC } from "react";
 import { Link } from "react-router-dom";
 
 const columns: GridColDef[] = [
@@ -21,7 +22,7 @@ const columns: GridColDef[] = [
   },
   {
     field: "action",
-    type: "string",
+    type: "actions",
     width: 130,
     renderCell: (params) => (
       <Button variant="contained" color="error" size="small">
@@ -106,7 +107,7 @@ const rows = [
   },
 ];
 
-export const TableComposant = () => {
+export const TableComposant: FC = () => {
   return (
     <div style={{ height: 400, width: "100%" }}>
       <DataGrid

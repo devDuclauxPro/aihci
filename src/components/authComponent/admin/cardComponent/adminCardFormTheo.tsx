@@ -10,7 +10,7 @@ export const AdminCardFormTheo: FC<TInternatInfoCard> = ({ link, buttonText, des
     <Card elevation={3} sx={{ bgcolor: "#fcb900" }}>
       <CardActionArea disableRipple>
         <CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-          <ButtonGeneric buttonText={buttonText} link={link} zooInOutCard={zoomInOutInternatFormTheo} />
+          <ButtonGeneric couleur="primary" buttonText={buttonText} link={link} zooInOutCard={zoomInOutInternatFormTheo} />
           {description && (
             <Typography
               variant="subtitle1"

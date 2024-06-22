@@ -1,9 +1,10 @@
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Accordion, AccordionDetails, AccordionSummary, Container, Typography } from "@mui/material";
 import { Layout } from "layout/layout";
+import { FC } from "react";
 import { TableComposant } from "./tableComposant";
 
-export const ArticleScientifique = () => {
+export const ArticleScientifique: FC = () => {
   return (
     <Layout>
       <Container maxWidth="lg" sx={{ marginY: 3, minHeight: "70vh" }}>

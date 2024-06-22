@@ -44,3 +44,22 @@ export type TInternatInfoCard = {
   buttonText: string;
   description?: string;
 };
+
+// Type utilisé pour le tableau
+export type TRowData = {
+  id: number;
+  fullName: string;
+  email: string;
+  contact: string;
+  interne: string;
+  message: string;
+};
+
+// Type utilisé pour le paramètre du composant Message
+export type TMessage = {
+  messageProps: {
+    open: boolean;
+    handleClose: () => void;
+    selectedRow: { fullName: string; email: string; contact: string; interne: string; message: string } | null;
+  };
+};

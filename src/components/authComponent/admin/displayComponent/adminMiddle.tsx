@@ -1,42 +1,35 @@
 import { Box, Container, Grid } from "@mui/material";
 import { FC } from "react";
-import { AdminCardDocument } from "./adminCardDocument";
-import { AdminCardFormTheo } from "./adminCardFormTheo";
-import { AdminCardProbleme } from "./adminCardProbleme";
-import { AdminCardProcuration } from "./adminCardProcuration";
-import { AdminCardSoumission } from "./adminCardSoumission";
+import { AdminCardDocument } from "../cardComponent/adminCardDocument";
+import { AdminCardFormTheo } from "../cardComponent/adminCardFormTheo";
+import { AdminCardProbleme } from "../cardComponent/adminCardProbleme";
+import { AdminCardSoumission } from "../cardComponent/adminCardSoumission";
 
 export const AdminMiddle: FC = () => {
   return (
-    <Box bgcolor="#f2f2f6">
+    <Box bgcolor="#f2f2f6" minHeight="50vh">
       <Container maxWidth="lg" sx={{ padding: 5 }}>
         <Grid container spacing={2}>
           {/* Colonne de gauche  */}
           <Grid item xs={12} md={6}>
             <Grid container direction="column" spacing={2}>
               <Grid item>
-                <AdminCardProcuration
-                  link="/espace-membre/admin/ajouter-une-procuration"
-                  buttonText="J'ajoute une procurations"
-                />
+                <AdminCardDocument link="/espace-membre/admin/ajouter-un-document" buttonText="J'ajoute un document" />
+              </Grid>
+              <Grid item>
+                <AdminCardDocument link="/espace-membre/admin/rediger-article" buttonText="Je redige les articles" />
               </Grid>
               <Grid item>
                 <AdminCardDocument
-                  link="/espace-membre/admin/ajouter-un-autre-document"
-                  buttonText="J'ajoute un autre document"
-                />
-              </Grid>
-              <Grid item>
-                <AdminCardFormTheo
-                  link="/espace-membre/admin/voir-les-inscrits-de-la-formation"
-                  buttonText="Je regarde les inscrits de la formation"
+                  link="/espace-membre/admin/ajoute-le-titre-de-la-formation"
+                  buttonText="J'ajoutes le titre de la formation"
                 />
               </Grid>
             </Grid>
           </Grid>
           {/* Colonne de droite */}
           <Grid item xs={12} md={6}>
-            <Grid container spacing={1}>
+            <Grid container spacing={2}>
               {/* Section Filières de l'internat */}
               <Grid item xs={12}>
                 <AdminCardProbleme
@@ -51,7 +44,10 @@ export const AdminMiddle: FC = () => {
                 />
               </Grid>
               <Grid item xs={12}>
-                <AdminCardSoumission link="/espace-membre/admin/rediger-article" buttonText="Je redige les articles" />
+                <AdminCardFormTheo
+                  link="/espace-membre/admin/voir-les-inscrits-de-la-formation"
+                  buttonText="Je regarde les inscrits de la formation"
+                />
               </Grid>
             </Grid>
           </Grid>

@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import { AdminMiddle } from "components/admin/affichage/adminMiddle";
+import { AdminMiddle } from "components/authComponent/admin/displayComponent/adminMiddle";
 import { GenericHeaderAihci } from "components/generic/genericHeaderAihci";
 import { Layout } from "layout/layout";
 

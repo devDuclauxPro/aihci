@@ -1,8 +1,15 @@
 import { App } from "App";
-import { AuthAdmin } from "components/admin/affichage/authAdmin";
-import { RedactionArticle } from "components/admin/formulaire/redactionArticle";
-import { ArticleScientifique } from "components/admin/visuel/articleScientifique";
-import { Preocupation } from "components/admin/visuel/preocupation";
+import { ArticleScientifique } from "components/authComponent/admin/displayComponent/articleScientifique";
+import { AuthAdmin } from "components/authComponent/admin/displayComponent/authAdmin";
+import { InscritFormation } from "components/authComponent/admin/displayComponent/inscritFormation";
+import { Preocupation } from "components/authComponent/admin/displayComponent/preocupation";
+import { AjoutDoc } from "components/authComponent/admin/formComponent/ajoutDoc";
+import { AjoutTitre } from "components/authComponent/admin/formComponent/ajoutTitreFormation";
+import { RedigerArticle } from "components/authComponent/admin/formComponent/redigerArticle";
+import { TelechargerDoc } from "components/authComponent/membre/displayComponent/telechargerDoc";
+import { InscrireFormation } from "components/authComponent/membre/formComponent/inscrireFormation";
+import { RedigerPreocupation } from "components/authComponent/membre/formComponent/redigerPreocupation";
+import { SoumettreResume } from "components/authComponent/membre/formComponent/soumettreResume";
 import { Actualite } from "pages/actualite";
 import { Admin } from "pages/admin";
 import { Article } from "pages/article";
@@ -15,7 +22,6 @@ import { Inscription } from "pages/inscription";
 import { Internat } from "pages/internat";
 import { Membre } from "pages/membre";
 import { Partenaire } from "pages/partenaire";
-import { Procuration } from "pages/procuration";
 import { QuiSommesNous } from "pages/quiSommesNous";
 import { Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 
@@ -34,14 +40,19 @@ const routes = createRoutesFromElements(
     <Route path="accueil/article/:id" element={<Article />} />
     <Route path="espace-membre" element={<Auth />}>
       <Route index element={<Membre />} />
-      <Route path="espace-membre" element={<Procuration />} />
+      <Route path="telecharger-les-documents" element={<TelechargerDoc />} />
+      <Route path="soumettre-une-preocupation" element={<RedigerPreocupation />} />
+      <Route path="inscription-formation" element={<InscrireFormation />} />
+      <Route path="soumettre-mon-resume" element={<SoumettreResume />} />
       <Route path="admin" element={<AuthAdmin />}>
         <Route index element={<Admin />} />
-        <Route path="rediger-article" element={<RedactionArticle />} />
+        <Route path="rediger-article" element={<RedigerArticle />} />
+        <Route path="ajouter-un-document" element={<AjoutDoc />} />
+        <Route path="ajoute-le-titre-de-la-formation" element={<AjoutTitre />} />
         <Route path="voir-les-articles-soumis" element={<ArticleScientifique />} />
+        <Route path="voir-les-inscrits-de-la-formation" element={<InscritFormation />} />
         <Route path="voir-les-preocupations" element={<Preocupation />} />
       </Route>
-      <Route path="telecharher-les-procurations" element={<Procuration />} />
     </Route>
     <Route path="*" element={<ErrorPage />} />
   </Route>

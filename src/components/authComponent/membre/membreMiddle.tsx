@@ -1,12 +1,10 @@
 import { Box, Container, Grid } from "@mui/material";
 import { FC } from "react";
-import { MembreCardDocument } from "./membreCardDocument";
-import { MembreCardEspaceProfil } from "./membreCardEspaceProfil";
-import { MembreCardFormTheo } from "./membreCardFormTheo";
-import { MembreCardProbleme } from "./membreCardProbleme";
-import { MembreCardProcuration } from "./membreCardProcuration";
-import { MembreCardSoumission } from "./membreCardSoumission";
-import { MembreCardVoirInfo } from "./membreCardVoirInfo";
+import { MembreCardDocument } from "./cardComponent/membreCardDocument";
+import { MembreCardEspaceProfil } from "./cardComponent/membreCardEspaceProfil";
+import { MembreCardFormTheo } from "./cardComponent/membreCardFormTheo";
+import { MembreCardProbleme } from "./cardComponent/membreCardProbleme";
+import { MembreCardSoumission } from "./cardComponent/membreCardSoumission";
 
 export const MembreMiddle: FC = () => {
   return (
@@ -17,29 +15,24 @@ export const MembreMiddle: FC = () => {
           <Grid item xs={12} md={6}>
             <Grid container direction="column" spacing={2}>
               <Grid item>
-                <MembreCardProcuration
-                  link="/espace-membre/telecharher-les-procurations"
-                  buttonText="Les procurations"
-                  description="Tu souhaites te faire représenter par un autre interne ? Clique ici pour télécharger une procuration !"
-                />
-              </Grid>
-              <Grid item>
                 <MembreCardDocument
-                  link="/espace-membre/telecharger-les-autres-documents"
-                  buttonText="Les autres documents"
+                  link="/espace-membre/telecharger-les-documents"
+                  buttonText="Les documents téléchargeables"
+                  description="Vous souhaitez télécharger des documents ? Veuillez cliquer ici pour les télécharger !"
                 />
               </Grid>
               <Grid item>
                 <MembreCardFormTheo
                   link="/espace-membre/inscription-formation"
                   buttonText="S'inscrire à une formation"
+                  description="Vous souhaitez participer à une formation ? Veuillez cliquer ici pour les inscriptions !"
                 />
               </Grid>
             </Grid>
           </Grid>
           {/* Colonne de droite */}
           <Grid item xs={12} md={6}>
-            <Grid container spacing={1}>
+            <Grid container spacing={2}>
               {/* Section Filières de l'internat */}
               <Grid item xs={12}>
                 <MembreCardProbleme
@@ -50,18 +43,12 @@ export const MembreMiddle: FC = () => {
               </Grid>
               <Grid item xs={12}>
                 <MembreCardSoumission
-                  link="/espace-membre/soumettre-mon-article"
-                  buttonText="Je soumets mon article pour les Journées scientifiques"
-                  description="La commission scientifique analysera vos articles et resumés et vous répondra dans un délai de 72 heures"
+                  link="/espace-membre/soumettre-mon-resume"
+                  buttonText="Je soumets mon article / résumé pour les Journées scientifiques"
+                  description="La commission scientifique analysera vos articles et résumés et vous répondra dans un délai de 72 heures"
                 />
               </Grid>
             </Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <MembreCardVoirInfo
-              link="/espace-membre/mes-soumission"
-              buttonText="Je consulte mes informations soumises"
-            />
           </Grid>
           <Grid item xs={12}>
             <MembreCardEspaceProfil link="/espace-membre/mes-information" buttonText="Je consulte mon profil" />

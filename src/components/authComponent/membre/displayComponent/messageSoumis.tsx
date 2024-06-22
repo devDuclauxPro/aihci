@@ -1,7 +1,8 @@
-import { Card } from "@mui/material";
+import { Box, Button, Card } from "@mui/material";
 import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
 import { FC } from "react";
+import { TMessage } from "types/types";
 
 const style = {
   position: "absolute" as "absolute",
@@ -11,18 +12,10 @@ const style = {
   width: 800,
   bgcolor: "background.paper",
   boxShadow: 24,
-  p: 4,
+  padding: 4,
 };
 
-type TMessage = {
-  messageProps: {
-    open: boolean;
-    handleClose: () => void;
-    selectedRow: { fullName: string; email: string; contact: string; interne: string; message: string } | null;
-  };
-};
-
-export const Message: FC<TMessage> = ({ messageProps }) => {
+export const MessageSoumis: FC<TMessage> = ({ messageProps }) => {
   return (
     <Modal
       keepMounted
@@ -35,11 +28,16 @@ export const Message: FC<TMessage> = ({ messageProps }) => {
         <Typography id="keep-mounted-modal-title" variant="h6" component="h2" textAlign="center">
           Préocupation de {messageProps?.selectedRow?.fullName}
         </Typography>
-        <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
+        <Typography id="keep-mounted-modal-description" sx={{ marginY: 3 }}>
           {messageProps.selectedRow ? (
-            <Typography variant="body2" component="p">
-              {messageProps.selectedRow.message}
-            </Typography>
+            <Box>
+              <Typography variant="body2" component="p">
+                {messageProps.selectedRow.message}
+              </Typography>
+              <Button disableRipple variant="contained" color="error" fullWidth sx={{ marginTop: 3 }}>
+                Supprimer le message
+              </Button>
+            </Box>
           ) : (
             "Aucune donnée sélectionnée"
           )}
