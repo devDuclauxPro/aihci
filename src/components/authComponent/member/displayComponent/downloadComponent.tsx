@@ -1,7 +1,8 @@
-import { Accordion, Container, Typography } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Container, Typography } from "@mui/material";
 import { Layout } from "layout/layout";
 import { FC } from "react";
-import { DownloadTable } from "../tableComponent/downloadTable";
+import { Link } from "react-router-dom";
 
 export const DownloadComponent: FC = () => {
   return (
@@ -13,7 +14,27 @@ export const DownloadComponent: FC = () => {
         {["Procuration", "Fiche de note", "Listes des postes", "Programme de gardes en pharmacie CHU Treichville"].map(
           (list, id) => (
             <Accordion key={id} sx={{ marginBottom: 1 }}>
-              <DownloadTable list={{ list, id }} />
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls={`ancien-bureau-${list + 1}`}
+                id={`ancien-bureau-${list + 1}`}
+                sx={{ bgcolor: "#9db69d", fontWeight: 600, color: "white" }}
+              >
+                {list}
+              </AccordionSummary>
+              <AccordionDetails>
+                <Box gap={2} display="flex" alignItems="center">
+                  <Typography variant="body2" component="p">
+                    Titre du document à télécharger
+                  </Typography>
+                  <Link to="/" target="_blank" rel="noopener noreferrer">
+                    Télécharger le document
+                  </Link>
+                  <Button variant="contained" color="error" size="small">
+                    Supprimer
+                  </Button>
+                </Box>
+              </AccordionDetails>
             </Accordion>
           )
         )}

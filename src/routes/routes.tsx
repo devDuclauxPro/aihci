@@ -9,7 +9,6 @@ import { ArticleSubmittedComponent } from "components/authComponent/member/displ
 import { ConcernComponent } from "components/authComponent/member/displayComponent/concernComponent";
 import { DownloadComponent } from "components/authComponent/member/displayComponent/downloadComponent";
 import { RegisterTrainingComponent } from "components/authComponent/member/displayComponent/registerTrainingComponent";
-import { ConcernTable } from "components/authComponent/member/tableComponent/concernTable";
 import { Admin } from "pages/admin";
 import { Article } from "pages/article";
 import { Association } from "pages/association";
@@ -52,7 +51,7 @@ const routes = createRoutesFromElements(
         <Route path="ajoute-le-titre-de-la-formation" element={<AddTitleTrainingForm />} />
         <Route path="voir-les-articles-soumis" element={<ArticleScientistComponent />} />
         <Route path="voir-les-inscrits-de-la-formation" element={<RegisteredTrainingComponent />} />
-        <Route path="voir-les-preocupations" element={<ConcernTable />} />
+        <Route path="voir-les-preocupations" element={<ConcernComponent />} />
       </Route>
     </Route>
     <Route path="*" element={<ErrorPage />} />
