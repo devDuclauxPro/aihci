@@ -1,6 +1,5 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { zoomInOutGenericOne } from "animations/animation";
-import { LeftContent } from "components/generic/leftContent";
 import { FC } from "react";
 import { BtnGeneric } from "./btnGeneric";
 
@@ -20,5 +19,13 @@ export const LeftRegistrationConnection: FC = () => {
         </Box>
       </Box>
     </Grid>
+  );
+};
+
+const LeftContent = ({ content }: { content: string }) => {
+  return (
+    <Typography variant="body1" textAlign="center" marginBottom={3}>
+      {content}
+    </Typography>
   );
 };

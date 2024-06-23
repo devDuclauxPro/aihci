@@ -1,8 +1,8 @@
 import { Divider } from "@mui/material";
-import { WhoAreFooter } from "components/freedComponent/quiSomme/whoAreFooter";
-import { WhoAreHeader } from "components/freedComponent/quiSomme/whoAreHeader";
-import { WhoAreMiddle } from "components/freedComponent/quiSomme/whoAreMiddle";
-import { WhoHeaderContact } from "components/freedComponent/quiSomme/whoHeaderContact";
+import { WhoAreFooter } from "components/freedComponent/whoAre/whoAreFooter";
+import { WhoAreHeader } from "components/freedComponent/whoAre/whoAreHeader";
+import { WhoAreMiddle } from "components/freedComponent/whoAre/whoAreMiddle";
+import { WhoHeaderContact } from "components/freedComponent/whoAre/whoHeaderContact";
 import { Layout } from "layout/layout";
 import { FC } from "react";
 
