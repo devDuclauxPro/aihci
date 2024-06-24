@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { CardGenericComponent } from "components/generic/cardGenericComponent";
-import { SectionBoxPratique } from "components/generic/sectionBoxPratique";
+import { SectionBoxGeneric } from "components/generic/SectionBoxGeneric";
 import { FC } from "react";
 
 export const InternatMiddle: FC = () => {
@@ -58,7 +58,7 @@ export const InternatMiddle: FC = () => {
               </Grid>
               {/* Section Formation pratique durant l’internat */}
               <Grid item xs={12} sx={{ display: { xs: "none", lg: "block" } }}>
-                <SectionBoxPratique title="La formation pratique durant l’internat">
+                <SectionBoxGeneric title="La formation pratique durant l’internat">
                   <Grid item marginBottom={1}>
                     <CardGenericComponent btnLink="/le-samedi-de-linterne" btnText="Samedi de l'interne" />
                   </Grid>
@@ -68,12 +68,12 @@ export const InternatMiddle: FC = () => {
                   <Grid item marginBottom={1}>
                     <CardGenericComponent btnLink="/les-journees-scientifiques" btnText="Les journées scientifiques" />
                   </Grid>
-                </SectionBoxPratique>
+                </SectionBoxGeneric>
               </Grid>
             </Grid>
           </Grid>
           <Grid item xs={12} sx={{ display: { lg: "none" } }}>
-            <SectionBoxPratique title="La formation pratique durant l’internat">
+            <SectionBoxGeneric title="La formation pratique durant l’internat">
               <Grid item marginBottom={1}>
                 <CardGenericComponent btnLink="/le-samedi-de-linterne" btnText="Samedi de l'interne" />
               </Grid>
@@ -83,7 +83,7 @@ export const InternatMiddle: FC = () => {
               <Grid item marginBottom={1}>
                 <CardGenericComponent btnLink="/les-journees-scientifiques" btnText="Les journées scientifiques" />
               </Grid>
-            </SectionBoxPratique>
+            </SectionBoxGeneric>
           </Grid>
         </Grid>
       </Container>

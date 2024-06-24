@@ -1,14 +1,13 @@
-import { ArticleHeader } from "components/freedComponent/article/articleHeader";
 import { GenericHeader } from "components/generic/genericHeader";
 import aihci from "images/aihci.png";
 import { Layout } from "layout/layout";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
-export const Article: FC = () => {
+export const DisplayGenericComponent: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <Layout>
       <GenericHeader imageHeader={aihci} />
-      <ArticleHeader />
+      {children}
     </Layout>
   );
 };

@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { rowsTraining } from "fakeData/data";
 import { FC } from "react";
 
 const columns: GridColDef[] = [
@@ -21,46 +22,11 @@ const columns: GridColDef[] = [
   },
 ];
 
-const rows = [
-  {
-    id: 1,
-    fullName: "Snow",
-    date: "22/06/2024",
-    email: "jon@gmail.com",
-    contact: "0707965744",
-    interne: "Interne en pharmacie",
-  },
-  {
-    id: 2,
-    fullName: "Lannister",
-    date: "22/06/2024",
-    email: "cersei@gmail.com",
-    contact: "0707965744",
-    interne: "Interne en pharmacie",
-  },
-  {
-    id: 3,
-    fullName: "Lannister",
-    date: "22/06/2024",
-    email: "jaime@gmail.com",
-    contact: "0707965744",
-    interne: "Interne en pharmacie",
-  },
-  {
-    id: 4,
-    fullName: "Stark",
-    date: "22/06/2024",
-    email: "arya@gmail.com",
-    contact: "0707965744",
-    interne: "Interne en pharmacie",
-  },
-];
-
 export const RegisteredTrainingTable: FC = () => {
   return (
     <div style={{ height: 400, width: "100%" }}>
       <DataGrid
-        rows={rows}
+        rows={rowsTraining}
         columns={columns}
         initialState={{ pagination: { paginationModel: { page: 0, pageSize: 5 } } }}
         pageSizeOptions={[5, 10]}

@@ -1,24 +1,10 @@
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Container,
-  Grid,
-  Typography,
-} from "@mui/material";
-import { zoomInOutGenericOne } from "animations/animation";
-import { BtnGeneric } from "components/generic/btnGeneric";
-import aihciLogo from "images/aihci.png";
+import { Box, Container } from "@mui/material";
+import { CardArticleGeneric } from "components/generic/cardArticleGeneric";
 import offresPartenaires from "images/offres-partenaires.png";
 import { FC } from "react";
-import { listCards } from "utils/listFilter";
 
 // Composant PartenaireMiddle affiche une liste de cartes représentant les partenaires ou les offres.
 export const PartnerMiddle: FC = () => {
-  const partenairesImage = aihciLogo;
   const offresImage = offresPartenaires;
 
   return (
@@ -29,42 +15,7 @@ export const PartnerMiddle: FC = () => {
         </Box>
       </Box>
       <Box marginBottom={3}>
-        <Grid container spacing={2} mt={3}>
-          {listCards.map((item, id) => (
-            <Grid key={id} item xs={12} sm={6} lg={4}>
-              <Card elevation={5} sx={{ padding: 1 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height={150}
-                    sx={{ objectFit: "cover" }}
-                    image={partenairesImage}
-                    title="Logo AIHCI"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="subtitle2" component="div" color="#e5691b">
-                      {item.date}
-                    </Typography>
-                    <Typography gutterBottom variant="subtitle2" component="div" color="#275427">
-                      {item.title}
-                    </Typography>
-                    <Typography variant="subtitle1" color="text.secondary" fontSize={13}>
-                      {item.content}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <BtnGeneric
-                      btnText="En savoir plus"
-                      btnLink="/qui-sommes-nous"
-                      btnZooInOutCard={zoomInOutGenericOne}
-                      btnSize="small"
-                    />
-                  </CardActions>
-                </CardActionArea>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+        <CardArticleGeneric />
       </Box>
     </Container>
   );

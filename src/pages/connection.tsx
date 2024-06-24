@@ -12,7 +12,7 @@ export const Connection: FC = () => {
         <Box paddingTop={12} paddingBottom={5}>
           <Paper elevation={5} sx={{ borderRadius: 3, padding: 1 }}>
             <Grid container sx={{ flexDirection: { xs: "column-reverse", md: "row" } }}>
-              <LeftRegistrationConnection />
+              <LeftRegistrationConnection btnLink="/inscription" btnText="Adhérer à l'AIHCI" />
               <RightConnection />
             </Grid>
           </Paper>

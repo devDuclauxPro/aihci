@@ -3,7 +3,7 @@ import { zoomInOutGenericOne } from "animations/animation";
 import { FC } from "react";
 import { BtnGeneric } from "./btnGeneric";
 
-export const LeftRegistrationConnection: FC = () => {
+export const LeftRegistrationConnection: FC<{ btnLink: string; btnText: string }> = ({ btnLink, btnText }) => {
   return (
     <Grid item xs={12} md={6} marginTop={15}>
       <Box padding={1} display="flex" flexDirection="column" alignItems="center">
@@ -15,7 +15,7 @@ export const LeftRegistrationConnection: FC = () => {
         <LeftContent content="Si tu es adhérent mais que tu n’as pas reçu de mail de validation de compte, merci de nous contacter !" />
         <LeftContent content="Si tu es un adhérent, rendez-vous ici ⏬" />
         <Box marginTop={3}>
-          <BtnGeneric btnText="Se connecter" btnLink="/se-connecter" btnZooInOutCard={zoomInOutGenericOne} />
+          <BtnGeneric btnText={btnText} btnLink={btnLink} btnZooInOutCard={zoomInOutGenericOne} />
         </Box>
       </Box>
     </Grid>

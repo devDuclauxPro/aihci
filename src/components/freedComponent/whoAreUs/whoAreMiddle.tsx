@@ -1,5 +1,4 @@
 import { Card, CardActionArea, CardContent, CardMedia, Container, Grid, Typography } from "@mui/material";
-import { WhoGenericTitle } from "components/generic/whoGenericTitle";
 import { FC } from "react";
 import { listCards } from "utils/listFilter";
 
@@ -11,7 +10,9 @@ const defaultImageUrl =
 export const WhoAreMiddle: FC = () => {
   return (
     <Container maxWidth="lg" sx={{ marginY: 3 }}>
-      <WhoGenericTitle title="Bureau Exécutif National" />
+      <Typography variant="h3" component="h1" color="#ff6900" textAlign="center">
+        Bureau Exécutif National
+      </Typography>
       <Grid container spacing={2} mt={3}>
         {listCards.map((item, id) => (
           <Grid key={id} item xs={12} sm={6} md={4} lg={3}>

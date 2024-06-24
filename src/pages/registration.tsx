@@ -10,7 +10,7 @@ export const Registration = () => {
         <Box paddingTop={12} paddingBottom={5}>
           <Paper elevation={5} sx={{ borderRadius: 3, padding: 1 }}>
             <Grid container sx={{ flexDirection: { xs: "column-reverse", md: "row" } }}>
-              <LeftRegistrationConnection />
+              <LeftRegistrationConnection btnLink="/se-connecter"  btnText="Se connecter" />
               <RightRegistration />
             </Grid>
           </Paper>

@@ -1,6 +1,7 @@
 import { App } from "App";
 import { ArticleScientistComponent } from "components/authComponent/admin/displayComponent/articleScientistComponent";
 import { AuthAdminComponent } from "components/authComponent/admin/displayComponent/authAdminComponent";
+import { ContentAppComponent } from "components/authComponent/admin/displayComponent/contentAppComponent";
 import { RegisteredTrainingComponent } from "components/authComponent/admin/displayComponent/registeredTrainingComponent";
 import { AddDocumentForm } from "components/authComponent/admin/formComponent/addDocumentForm";
 import { AddTitleTrainingForm } from "components/authComponent/admin/formComponent/addTitleTrainingForm";
@@ -9,6 +10,8 @@ import { ArticleSubmittedComponent } from "components/authComponent/member/displ
 import { ConcernComponent } from "components/authComponent/member/displayComponent/concernComponent";
 import { DownloadComponent } from "components/authComponent/member/displayComponent/downloadComponent";
 import { RegisterTrainingComponent } from "components/authComponent/member/displayComponent/registerTrainingComponent";
+import { CompetitionInternat } from "components/freedComponent/internat/displayComponent/competitionInternat";
+
 import { Admin } from "pages/admin";
 import { Article } from "pages/article";
 import { Association } from "pages/association";
@@ -21,7 +24,6 @@ import { Member } from "pages/member";
 import { News } from "pages/news";
 import { Partner } from "pages/partner";
 import { Registration } from "pages/registration";
-
 import { WhoAreUs } from "pages/whoAreUs";
 import { Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 
@@ -31,6 +33,7 @@ const routes = createRoutesFromElements(
     <Route index element={<Home />} />
     <Route path="accueil" element={<Home />} />
     <Route path="linternat" element={<Internat />} />
+    <Route path="le-concours-de-linternat" element={<CompetitionInternat />} />
     <Route path="notre-association" element={<Association />} />
     <Route path="nos-partenaires" element={<Partner />} />
     <Route path="actualites" element={<News />} />
@@ -48,7 +51,8 @@ const routes = createRoutesFromElements(
         <Route index element={<Admin />} />
         <Route path="rediger-article" element={<WriteArtcleForm />} />
         <Route path="ajouter-un-document" element={<AddDocumentForm />} />
-        <Route path="ajoute-le-titre-de-la-formation" element={<AddTitleTrainingForm />} />
+        <Route path="ajouter-le-titre-de-la-formation" element={<AddTitleTrainingForm />} />
+        <Route path="ajouter-le-contenu" element={<ContentAppComponent />} />
         <Route path="voir-les-articles-soumis" element={<ArticleScientistComponent />} />
         <Route path="voir-les-inscrits-de-la-formation" element={<RegisteredTrainingComponent />} />
         <Route path="voir-les-preocupations" element={<ConcernComponent />} />

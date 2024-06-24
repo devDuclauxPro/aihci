@@ -1,6 +1,5 @@
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Accordion, AccordionDetails, AccordionSummary, Container } from "@mui/material";
-import { WhoGenericTitle } from "components/generic/whoGenericTitle";
+import { Accordion, AccordionDetails, AccordionSummary, Container, Typography } from "@mui/material";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
@@ -11,7 +10,9 @@ import { Link } from "react-router-dom";
 export const WhoAreFooter: FC = () => {
   return (
     <Container maxWidth="lg" sx={{ marginY: 3 }}>
-      <WhoGenericTitle title="Anciens Bureaux Exécutifs" />
+      <Typography variant="h3" component="h1" color="#ff6900" textAlign="center">
+        Anciens Bureaux Exécutifs
+      </Typography>
       {[1, 2, 3, 4, 5].map((list, id) => (
         <Accordion key={id} sx={{ marginBottom: 1 }}>
           <AccordionSummary

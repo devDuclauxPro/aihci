@@ -7,7 +7,7 @@ export const AdminMiddleComponent: FC = () => {
     <Box bgcolor="#f2f2f6" minHeight="50vh">
       <Container maxWidth="lg" sx={{ padding: 5 }}>
         <Grid container spacing={2}>
-          {/* Colonne de gauche  */}
+          {/* Colonne de gauche */}
           <Grid item xs={12} md={6}>
             <Grid container direction="column" spacing={2}>
               <Grid item>
@@ -17,15 +17,13 @@ export const AdminMiddleComponent: FC = () => {
                 />
               </Grid>
               <Grid item>
-                <CardGenericComponent btnLink="/espace-membre/admin/rediger-article" btnText="Je redige les articles" />
+                <CardGenericComponent btnLink="/espace-membre/admin/rediger-article" btnText="Je rédige les articles" />
               </Grid>
               <Grid item>
-                <Grid item>
-                  <CardGenericComponent
-                    btnLink="/espace-membre/admin/ajoute-le-titre-de-la-formation"
-                    btnText="J'ajoutes le titre de la formation"
-                  />
-                </Grid>
+                <CardGenericComponent
+                  btnLink="/espace-membre/admin/ajouter-le-titre-de-la-formation"
+                  btnText="J'ajoute le titre de la formation"
+                />
               </Grid>
             </Grid>
           </Grid>
@@ -35,7 +33,7 @@ export const AdminMiddleComponent: FC = () => {
               <Grid item xs={12}>
                 <CardGenericComponent
                   btnLink="/espace-membre/admin/voir-les-preocupations"
-                  btnText="Je regarde les preocupations des internes"
+                  btnText="Je regarde les préoccupations des internes"
                   btnColor="primary"
                 />
               </Grid>
@@ -54,6 +52,13 @@ export const AdminMiddleComponent: FC = () => {
                 />
               </Grid>
             </Grid>
+          </Grid>
+          <Grid item xs={12}>
+            <CardGenericComponent
+              btnLink="/espace-membre/admin/ajouter-le-contenu"
+              btnText="J'ajoute du contenu sur mon site"
+              btnColor="secondary"
+            />
           </Grid>
         </Grid>
       </Container>

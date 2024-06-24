@@ -1,5 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import { WhoGenericTitle } from "components/generic/whoGenericTitle";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
@@ -10,7 +9,9 @@ import { Link } from "react-router-dom";
 export const WhoHeaderContact: FC = () => {
   return (
     <Box marginBottom={3} gap={3} display="flex" alignItems="center" justifyContent="center" flexDirection="column">
-      <WhoGenericTitle title="Contact" />
+      <Typography variant="h3" component="h1" color="#ff6900" textAlign="center">
+        Contact
+      </Typography>
       <Typography variant="subtitle2" component="p" fontSize={22} fontWeight={300}>
         Merci de nous contacter via l'adresse suivante :
         <Link to="mailto:aihci50@gmail.com" target="_blank">
