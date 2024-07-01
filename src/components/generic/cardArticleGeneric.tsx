@@ -13,7 +13,7 @@ export const CardArticleGeneric: FC = () => {
             <CardActionArea disableRipple>
               <CardMedia
                 component="img"
-                height={150}
+                height={160}
                 width={100}
                 sx={{ objectFit: "initial" }}
                 image="https://fnsipbm.fr/wp-content/uploads/2023/06/CDP-768x514.png"

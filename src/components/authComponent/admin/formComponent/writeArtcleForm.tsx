@@ -39,13 +39,7 @@ export const WriteArtcleForm: FC = () => {
             />
           </Grid>
           <Grid item sx={{ width: "100%" }}>
-            <CKEditor
-              editor={Editor}
-              data=""
-              onReady={(editor) => {
-                console.log("Editor is ready to use!", editor);
-              }}
-            />
+            <CKEditor editor={Editor} data="" />
           </Grid>
           <Grid item>
             <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
